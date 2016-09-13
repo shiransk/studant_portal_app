@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get '/resumes/:id', to: 'resumes#show'
-  get '/resumes/:id/edit', to: 'resumes#edit'
-  patch '/resumes/:id', to: 'resumes#update'
-
+  get '/students/:id', to: 'students#show'
+  
+  get '/students/:id/edit', to: 'resumes#edit'
+  patch '/students/:id', to: 'resumes#update'
  
 
 end
