@@ -1,0 +1,52 @@
+<h1>Edit Resume</h1>
+
+<%= form_tag "/resumes/#{params[:id]}", method: :patch do %>
+
+  <div>
+    <%= label_tag :first_name %>
+    <%= text_field_tag :first_name %>
+  </div> 
+  <div>
+    <%= label_tag :last_name %>
+    <%= text_field_tag :last_name %>
+  </div> 
+  <div>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div> 
+  <div>
+    <%= label_tag :phone_number %>
+    <%= text_field_tag :phone_number %>
+  </div> 
+  <div>
+    <%= label_tag :linkedin_url %>
+    <%= text_field_tag :linkedin_url %>
+  </div> 
+  <div>
+    <%= label_tag :twitter_handle %>
+    <%= text_field_tag :twitter_handle %>
+  </div> 
+  <div>
+    <%= label_tag :personal_blog %>
+    <%= text_field_tag :personal_blog %>
+  </div>  
+  <div>
+    <%= label_tag :online_resume_url %>
+    <%= text_field_tag :online_resume_url %>
+  </div>  
+  <div>
+    <%= label_tag :github_url %>
+    <%= text_field_tag :github_url %>
+  </div>  
+  <div>
+    <%= label_tag :photo %>
+    <%= text_field_tag :photo %>
+  </div> 
+  <div>
+    <%= label_tag :short_bio %>
+    <%= text_field_tag :short_bio %>
+  </div> 
+  <div>
+    <%= submit_tag "Edit Resume" %>
+  </div>
+<% end %>
