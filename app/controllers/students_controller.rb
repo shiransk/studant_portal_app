@@ -19,7 +19,10 @@ class StudentsController < ApplicationController
     }
 
     @student = Unirest.post("http://localhost:3000/resumes",
-      headers: {Accept: "application/json"},
+      headers: {
+        Accept: "application/json",
+        Authorization: "Token token = #{ENV['API-KEY']}"
+      },
       parameters: student_hash
     )
 
