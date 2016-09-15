@@ -33,7 +33,9 @@ class StudentsController < ApplicationController
         Accept: "application/json",
         Authorization: "#{ENV['TOKEN']}"
       }
-    )
+    ).body
+
+    binding.pry
   end
 
 end
