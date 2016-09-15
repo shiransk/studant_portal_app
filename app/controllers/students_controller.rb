@@ -10,12 +10,10 @@ class StudentsController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
-      phone_number: params[:phone_number],
-      password: params[:password],
-      password_confirmation: params[:password_confirmation]
+      phone_number: params[:phone_number]
     }
 
-    @student = Unirest.post("http://localhost:3000/resumes",
+    @student = Unirest.post("https://sheltered-harbor-10108.herokuapp.com/resumes",
       headers: {
         Accept: "application/json",
         Authorization: "#{ENV['TOKEN']}"
@@ -23,19 +21,18 @@ class StudentsController < ApplicationController
       parameters: student_hash
     )
 
-    redirect_to "/resumes/index"
+    redirect_to "/resumes/"
 
   end
 
   def index
-    @students = Unirest.get("http://localhost:3000/resumes",
+    @students = Unirest.get("https://sheltered-harbor-10108.herokuapp.com/resumes",
       headers: {
         Accept: "application/json",
         Authorization: "#{ENV['TOKEN']}"
       }
     ).body
 
-    binding.pry
   end
 
 end
