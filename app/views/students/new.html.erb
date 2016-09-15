@@ -1,0 +1,23 @@
+<h1>Create Account/Resume</h1>
+
+<%= form_tag "/students", method: :post do %>
+  <div>
+    <%= label_tag :first_name %>
+    <%= text_field_tag :first_name, "", placeholder: "Last Name" %>
+  </div>
+  <div>
+    <%= label_tag :last_name %>
+    <%= text_field_tag :last_name, "", placeholder: "Last Name" %>
+  </div>
+  <div>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "", placeholder: "Email Address" %>
+  </div>
+  <div>
+    <%= label_tag :phone_number %>
+    <%= text_field_tag :phone_number, "", placeholder: "Phone Number" %>
+  </div>
+  <div>
+    <%= submit_tag "Create Account/Resume" %>
+  </div>
+<% end %>
