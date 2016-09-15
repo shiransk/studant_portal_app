@@ -28,7 +28,12 @@ class StudentsController < ApplicationController
   end
 
   def index
-    @students = Unirest.get("http://localhost:3000/resumes")
+    @students = Unirest.get("http://localhost:3000/resumes",
+      headers: {
+        Accept: "application/json",
+        Authorization: "#{ENV['TOKEN']}"
+      }
+    )
   end
 
 end
