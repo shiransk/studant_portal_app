@@ -5,15 +5,25 @@ class StudentsController < ApplicationController
   end
 
   def create
-    
+
+    student_hash = {
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+
+    }
+
+    @student = Unirest.post("http://localhost:3000/resumes",
+      headers: {Accept: "application/json"},
+      parameters: student_hash
+    )
+
+    redirect_to "/resumes/index"
+
   end
 
   def index
-    @students = Unirest.get("http://localhost:3000")
-  end
-
-  def show
-    @student = Unirest.get("http://localhost:3000/api/v1/students/#{params[:id]}")
+    @students = Unirest.get("http://localhost:3000/resumes")
   end
 
 end
