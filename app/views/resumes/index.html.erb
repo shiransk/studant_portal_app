@@ -1,4 +1,15 @@
 <% @students.each do |student| %>
 <ul>
   <li><%= student.first_name %></li>
+  <li><%= student.last_name %></li>
+  <li><%= student.email %></li>
+  <li><%= student.phone_number %></li>
+  <li><%= student.linkedin %></li>
+  <li><%= student.twitter_handle %></li>
+  <li><%= student.website %></li>
+  <li><%= student.github %></li>
+  <li><%= student.photo %></li>
+  <li><%= student.created_at %></li>
+  <li><%= student.updated_at %></li>
 </ul>
+<% end  %>
