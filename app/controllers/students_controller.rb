@@ -1,11 +1,15 @@
 class StudentsController < ApplicationController
 
   def new
-
+   
   end
 
   def create
     
+  end
+
+  def index
+    @students = Unirest.get("http://localhost:3000")
   end
 
   def show
