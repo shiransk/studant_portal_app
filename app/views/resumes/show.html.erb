@@ -24,7 +24,7 @@
       <td>Last Name: <%= @student["last_name"] %></td>
       <td>Photo: <%= @student["photo"] %></td>
       <td>Short Bio: <%= @student["short_bio"] %></td>
-      <td>Online Resume URL: <%= @student["resume"} %></td>
+      <td>Online Resume URL: <%= @student["resume"] %></td>
       <td>Email: <%= @student["email"] %></td>
       <td>Phone Number: <%= @student["phone_number"] %></td>
       <td>Linkedin URL: <%= @student["linkedin"] %></td>
@@ -33,32 +33,32 @@
       <td>Github URL: <%= @student["github"] %></td>
       <td>
         <ul> Education:  
-          <li>Degree: <%= @student["educations_atttributes"]["degree"] %></li>
-          <li>University Name: <%= @student["educations_atttributes"]["university_name"] %></li>
-          <li>Start Date: <%= @student["educations_atttributes"]["start_date"] %></li>
-          <li>End Date: <%= @student["educations_atttributes"]["end_date"] %></li>
+          <li>Degree: <%= @student["educations"][0]["degree"] %></li>
+          <li>University Name: <%= @student["educations"][0]["university_name"] %></li>
+          <li>Start Date: <%= @student["educations"][0]["start_date"] %></li>
+          <li>End Date: <%= @student["educations"][0]["end_date"] %></li>
         </ul>
       </td>
       <td>
         <ul>Experiences:
-          <li>Job Title: <%= @student["experiences_attributes"]["job_title"] %></li>
-          <li>Company Name: <%= @student["experiences_attributes"]["company_name"] %></li>
-          <li>Details: <%= @student["experiences_attributes"]["details"] %></li>
-          <li>Start Date: <%= @student["experiences_attributes"]["start_date"] %></li>
-          <li>End Date: <%= @student["experiences_attributes"]["end_date"] %></li>
+          <li>Job Title: <%= @student["experiences"][0]["job_title"] %></li>
+          <li>Company Name: <%= @student["experiences"][0]["company_name"] %></li>
+          <li>Details: <%= @student["experiences"][0]["details"] %></li>
+          <li>Start Date: <%= @student["experiences"][0]["start_date"] %></li>
+          <li>End Date: <%= @student["experiences"][0]["end_date"] %></li>
         </ul>
       </td>
       <td>
         <ul>Skills:
-          <li>Skill: <%= @student["skills_attributes"]["skill_name"] %> </li>
+          <li>Skill: <%= @student["skills"][0]["skill_name"] %> </li>
         </ul>
       </td>
       <td>
         <ul>Capstone:
-          <li>Name: <%= @student["capstones_attributes"]["name"] %> </li>
-          <li>Description: <%= @student["capstones_attributes"]["description"] %> </li>
-          <li>Capstone URL: <%= @student["capstones_attributes"]["url"] %> </li>
-          <li>Screenshot URL: <%= @student["capstones_attributes"]["screenshot"] %> </li>
+          <li>Name: <%= @student["capstones"][0]["name"] %> </li>
+          <li>Description: <%= @student["capstones"][0]["description"] %> </li>
+          <li>Capstone URL: <%= @student["capstones"][0]["url"] %> </li>
+          <li>Screenshot URL: <%= @student["capstones"][0]["screenshot"] %> </li>
         </ul>
       </td>
     </tr>  
