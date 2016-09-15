@@ -1,0 +1,21 @@
+<h1> Student: </h1>
+  <ul>
+  <% students.each do |student| %>
+    <li>First Name: <%= students.first_name %></li>
+    <li>Last Name: <%= students.last_name %></li>
+    <li>Email: <%= students.email %></li>
+    <li>Phone Number: <%= students.phone_number %></li>
+    <li>Linkedin URL: <%= students.linkedin %></li>
+    <li>Twitter Handle: <%= students.twitter_handle %></li>
+    <li>Personal Blog/Website URL: <%= students.website %></li>
+    <li>Online Resume URL: <%= students.resume %></li>
+    <li>Github URL: <%= students.github %></li>
+    <li>Photo: <%= students.photo %></li>
+    <li>Created At: <%= students.created_at %></li>
+    <li>Updated Last: <%= students.updated_at %></li>
+      <ul>
+        <li>Short Bio: <%= students.phone_number %></li>
+      </ul>
+  </ul>
+  <% end %> 
+
