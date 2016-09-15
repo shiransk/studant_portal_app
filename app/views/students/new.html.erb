@@ -18,6 +18,14 @@
     <%= text_field_tag :phone_number, "", placeholder: "Phone Number" %>
   </div>
   <div>
+    <%= label_tag :password %>
+    <%= hidden_field_tag :password, "", placeholder: "Password" %>
+  </div>
+  <div>
+    <%= label_tag :password_confirmation %>
+    <%= hidden_field_tag :password_confirmation, "", placeholder: "Password Confirmation" %>
+  </div>
+  <div>
     <%= submit_tag "Create Account" %>
   </div>
 <% end %>
